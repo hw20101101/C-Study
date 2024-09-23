@@ -33,6 +33,14 @@ void test1(void){
 // -------------------- C 变量 END --------------------
 
 
+// -------------------- C 常量 START --------------------
+
+#define PI 3.14159 //预处理器（文本替换，无类型检查和作用域）
+
+const int MAX_WIDTH = 100; //有类型检查和作用域 优势；有助于调试和可读性
+
+// -------------------- C 常量 END --------------------
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     //printf("Hello, World!\n");

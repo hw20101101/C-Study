@@ -86,6 +86,45 @@ void test3(void){
     printf("*ptr:%d \n", *ptr);
 }
 
+void test4(void) {
+    
+    //数组
+    //double balance[5] = {1000.0, 2.0, 3.4, 7.0, 50.0};
+    //double salary = balance[3];
+    
+    
+    //访问数组元素
+    int n[10];
+    int i, j;
+    
+    for (i = 0; i < 10; i ++) {
+        n[i] = i + 100;
+    }
+    
+    for (j = 0; j < 10; j ++) {
+        printf("Element[%d] = %d \n", j, n[j]);
+    }
+    
+    //获取数组长度
+    int numbers[] = {1, 2, 3, 4, 5};
+    int length = sizeof(numbers) / sizeof(numbers[0]);
+    printf("length:%d \n", length);
+}
+
+void test5(void) {
+    
+    int var = 10; //局部变量
+    int *ip;      //指针变量
+    ip = &var;    //在指针变量中存储 var 的地址
+    
+    printf("var 变量的地址:%p \n", &var); //0x16fdff28c
+    
+    printf("ip 变量存储的地址:%p \n", ip); //0x16fdff28c
+    
+    printf("*ip 变量的值:%d \n", *ip); //10
+}
+
+
 int count22;
 extern void write_extern(void);
 
@@ -103,7 +142,9 @@ int main(int argc, const char * argv[]) {
     //count22 = 5;
     //write_extern();
     
-    test3();
+    //test3();
+    //test4();
+    test5();
     
     return 0;
 }

@@ -39,13 +39,37 @@ void test1(void){
 
 const int MAX_WIDTH = 100; //有类型检查和作用域 优势；有助于调试和可读性
 
+static int count = 10; //全局变量
+
+void test2(void){
+    
+    auto int temp; //默认的存储类
+    
+    register int temp2 = 10;
+    
+    static int some = 5; //局部变量，仅初始化一次
+    some ++;
+    printf("some:%d - count:%d \n", some, count);
+}
+
 // -------------------- C 常量 END --------------------
+
+int count22;
+extern void write_extern(void);
 
 int main(int argc, const char * argv[]) {
     // insert code here...
     //printf("Hello, World!\n");
     
-    test1();
+    //test1();
+
+    /*
+    while (count--) {
+        test2();
+    } */
+    
+    count22 = 5;
+    write_extern();
     
     return 0;
 }

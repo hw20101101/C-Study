@@ -11,6 +11,7 @@
 #include "CExtern.h"
 #include "CString.h"
 #include "CStruct.h"
+#include "CUnion.h"
 
 int count22;
 extern void write_extern(void);
@@ -46,7 +47,9 @@ int main(int argc, const char * argv[]) {
     //测试字符串
     //testString();
     
-    testStruct();
+    //testStruct();
+    
+    testUnion();
     
     return 0;
 }

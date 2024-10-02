@@ -12,6 +12,7 @@
 #include "CString.h"
 #include "CStruct.h"
 #include "CUnion.h"
+#include "CBitField.h"
 
 int count22;
 extern void write_extern(void);
@@ -49,7 +50,9 @@ int main(int argc, const char * argv[]) {
     
     //testStruct();
     
-    testUnion();
+    //testUnion();
+    
+    testBitField();
     
     return 0;
 }

@@ -6,6 +6,7 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
 
 void test5(void) {
     
@@ -49,3 +50,21 @@ void test6(void) {
 }
 
 // -------------------- 函数指针 END --------------------
+
+
+// -------------------- 回调函数 START --------------------
+
+void populate_array(int *array, size_t arraySize, int (*getNextValue)(void)) {
+    for (size_t i = 0; i < arraySize; i++) {
+        array[i] = getNextValue();
+    }
+}
+
+//获取随机值
+int getNextRandomValue(void) {
+    return rand();
+}
+
+// -------------------- 回调函数 END --------------------
+
+

@@ -30,7 +30,16 @@ int main(int argc, const char * argv[]) {
     //test3();
     //test4();
     //test5();
-    test6();
+    //test6();
+    
+    //测试回调函数
+    int myArray[10];
+    //注：getNextRandomValue 不能加括号，否则就不是函数指针
+    populate_array(myArray, 10, getNextRandomValue);
+    
+    for (int i = 0; i < 10; i++) {
+        printf("i:%d \n", myArray[i]);
+    }
     
     return 0;
 }

@@ -9,6 +9,7 @@
 #include "CPoint.h"
 #include "CArray.h"
 #include "CExtern.h"
+#include "CString.h"
 
 int count22;
 extern void write_extern(void);
@@ -40,6 +41,9 @@ int main(int argc, const char * argv[]) {
     for (int i = 0; i < 10; i++) {
         printf("i:%d \n", myArray[i]);
     }
+    
+    //测试字符串
+    testString();
     
     return 0;
 }

@@ -13,6 +13,8 @@
 #include "CStruct.h"
 #include "CUnion.h"
 #include "CBitField.h"
+#include "CTypedef.h"
+#include "CFlieRW.h"
 
 int count22;
 extern void write_extern(void);
@@ -52,7 +54,12 @@ int main(int argc, const char * argv[]) {
     
     //testUnion();
     
-    testBitField();
+    //testBitField();
+    
+    //testInputAndOutput();
+    
+    //writeFile();
+    readFile();
     
     return 0;
 }

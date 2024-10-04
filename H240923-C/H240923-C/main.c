@@ -15,6 +15,8 @@
 #include "CBitField.h"
 #include "CTypedef.h"
 #include "CFlieRW.h"
+#include "CDefine.h"
+#include "CError.h"
 
 int count22;
 extern void write_extern(void);
@@ -59,7 +61,12 @@ int main(int argc, const char * argv[]) {
     //testInputAndOutput();
     
     //writeFile();
-    readFile();
+    //readFile();
+    
+    //testDefine();
+    //testType();
+    
+    testError();
     
     return 0;
 }
